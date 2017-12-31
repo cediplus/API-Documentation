@@ -8,13 +8,13 @@
 [Plus-php](https://github.com/cediplus/API-Documentation/tree/master/php)
 
 #### Android
-[Plus-android](https://github.com/stevenmaguire/yelp-php)
+[Plus-android](https://github.com/cediplus/API-Documentation/tree/master/android)
 
-#### C#
-[Plus-C#](https://github.com/stevenmaguire/yelp-php)
+#### ASP.NET
+[Plus-ASP.NET](https://github.com/cediplus/API-Documentation/tree/master/asp.net)
 
 #### Wordpress
-[Plus-wordpress](https://github.com/stevenmaguire/yelp-php)
+[Plus-wordpress](https://github.com/cediplus/API-Documentation/tree/master/wordpress)
 
 ## License
 
