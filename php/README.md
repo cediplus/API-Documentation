@@ -8,14 +8,14 @@ PHASES
                                                 POST BILL(SEND BILL)
 IMPLEMENTATION
 
-| Parameters | Values | Description |
-| --- | --- | --- |
-| action `required`| sendbill | This is to indicate transaction type whether to send bill or check bill |                               
-| wallet_type `required` | m,t | This is to indicate the wallet type to use for the transaction Where ‘m’ is for mtn and ‘t’ is for tigo wallets respectively |  
-| wallet `required` | 000 000 0000 | This is the phone number for the transaction |
-| amount `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
-| api_key `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
-| description `required` | testing | This is to give a description of the transaction. | 
+| Parameters | Status | Values | Description |
+| --- | --- | --- | --- |
+| action | `required` | sendbill | This is to indicate transaction type whether to send bill or check bill |                               
+| wallet_type | `required` | m,t | This is to indicate the wallet type to use for the transaction Where ‘m’ is for mtn and ‘t’ is for tigo wallets respectively |  
+| wallet | `required` | 000 000 0000 | This is the phone number for the transaction |
+| amount | `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
+| api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
+| description | `required` | testing | This is to give a description of the transaction. | 
 
 
                     
