@@ -1,4 +1,4 @@
-# API-Documentation
+# CediPlus API-Documentation
 **CediPlus** API give you a gate way to receive payment from your customers via their mobile money wallet.
 # ![CediPlus](https://www.cediplus.com/images/cp.png)
 
