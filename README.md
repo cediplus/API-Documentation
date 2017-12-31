@@ -5,7 +5,7 @@
 ## Language support
 
 #### PHP
-[Plus-php](https://github.com/stevenmaguire/yelp-php)
+[Plus-php](https://github.com/cediplus/API-Documentation/tree/master/php)
 
 #### Android
 [Plus-android](https://github.com/stevenmaguire/yelp-php)
