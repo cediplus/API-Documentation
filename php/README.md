@@ -18,10 +18,11 @@ IMPLEMENTATION
 | description | `required` | testing | This is to give a description of the transaction. | 
 
 Sample PHP code
-
+```php
 <?php
 
-$action = 'sendbill
+/**Parameter values declared as a variable and assigned example values**/
+$action = 'sendbill';
 $wallet_type = 'm';
 $wallet = '0248499091';
 $amount = '1.00';
