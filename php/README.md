@@ -1,5 +1,5 @@
                                              CEDIPLUS PHP API DOCUMENTATION
-CediPlus API is designed to send bill or check bill of your mobile money wallets, this documentation runs users through the process of sending and recieving bills using the CediPlus API.
+CediPlus API is designed to send bill or check bill, this documentation runs users through the process of sending and recieving bills using the CediPlus API.
 
 PHASES
 1. POST REQUEST(SEND BILL)
@@ -22,12 +22,25 @@ Sample PHP code
 <?php
 
 /**Parameter values declared as a variable and assigned example values**/
-$action = 'sendbill';
-$wallet_type = 'm';
+$wtype = 'm';
 $wallet = '0248499091';
 $amount = '1.00';
-$api_key = 'xxxxxxxxxxxxxxx';
 $description = 'personal';
+$api_key = 'xxxxxxxxxxxxxxx';
+$action = 'sendbill';
+
+$sURL = "https://www.cediplus.com/apiplus/plus_v1";
+$sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
+   $aHTTP = array(
+     'http' => array(
+       'method'  => 'POST',
+       'header'  => 'Content-type: application/x-www-form-urlencoded',
+       'content' => $sPD
+     )
+   );
+   $context = stream_context_create($aHTTP);
+   $resultx = file_get_contents($sURL, false, $context);
+   $result = json_decode($resultx, TRUE);
 
 ?>
 
