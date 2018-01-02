@@ -27,10 +27,9 @@ $wallet = '0248499091';
 $amount = '1.00';
 $description = 'personal';
 $api_key = 'xxxxxxxxxxxxxxx';
-$action = 'sendbill';
 
 $sURL = "https://www.cediplus.com/apiplus/plus_v1";
-$sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action='.$action.'; 
+$sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
    $aHTTP = array(
      'http' => array(
        'method'  => 'POST',
@@ -61,10 +60,9 @@ Sample PHP code
 /**Parameter values declared as a variable and assigned example values**/
 $invoice = 'xxxxxxxxxxx';
 $api_key = 'xxxxxxxxxxxxxxx';
-$action = 'checkbill';
 
 $sURL = "https://www.cediplus.com/apiplus/plus_v1";
-$sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action='.$action.'; 
+$sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
    $aHTTP = array(
      'http' => array(
        'method'  => 'POST',
