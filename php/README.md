@@ -5,7 +5,7 @@ PHASES
 1. POST REQUEST(SEND BILL)
 2. GET REQUEST(CHECK BILL)
 
-                                                POST BILL(SEND BILL)
+                                                POST REQUEST(SEND BILL)
 IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
@@ -30,7 +30,7 @@ $api_key = 'xxxxxxxxxxxxxxx';
 $action = 'sendbill';
 
 $sURL = "https://www.cediplus.com/apiplus/plus_v1";
-$sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
+$sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action='.$action.'; 
    $aHTTP = array(
      'http' => array(
        'method'  => 'POST',
@@ -43,5 +43,41 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
    $result = json_decode($resultx, TRUE);
 
 ?>
+```
+
+                                                GET REQUEST(CHECK BILL)
+IMPLEMENTATION
+
+| Parameters | Status | Values | Description |
+| --- | --- | --- | --- |
+| action | `required` | sendbill | This is to indicate transaction type whether to send bill or check bill |
+| api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
+| invoice | `required` | xxxxxxxxxx | This is an invoice id used to check status of bill sent. | 
+
+Sample PHP code
+```php
+<?php
+
+/**Parameter values declared as a variable and assigned example values**/
+$invoice = 'xxxxxxxxxxx';
+$api_key = 'xxxxxxxxxxxxxxx';
+$action = 'checkbill';
+
+$sURL = "https://www.cediplus.com/apiplus/plus_v1";
+$sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action='.$action.'; 
+   $aHTTP = array(
+     'http' => array(
+       'method'  => 'POST',
+       'header'  => 'Content-type: application/x-www-form-urlencoded',
+       'content' => $sPD
+     )
+   );
+   $context = stream_context_create($aHTTP);
+   $resultx = file_get_contents($sURL, false, $context);
+   $result = json_decode($resultx, TRUE);
+
+?>
+```
+
 
                     
