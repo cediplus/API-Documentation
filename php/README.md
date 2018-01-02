@@ -5,7 +5,7 @@ PHASES
 1. POST REQUEST(SEND BILL)
 2. GET REQUEST(CHECK BILL)
 
-                                                POST REQUEST(SEND BILL)
+                                                SEND BILL(POST REQUEST)
 IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
@@ -44,7 +44,7 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
 ?>
 ```
 
-                                                GET REQUEST(CHECK BILL)
+                                                CHECK BILL(POST REQUEST)
 IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
