@@ -49,7 +49,7 @@ IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
 | --- | --- | --- | --- |
-| action | `required` | sendbill | This is to indicate transaction type whether to send bill or check bill |
+| action | `required` | checkbill | This is to indicate transaction type whether to send bill or check bill |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | invoice | `required` | xxxxxxxxxx | This is an invoice id used to check status of bill sent. | 
 
