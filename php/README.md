@@ -1,7 +1,9 @@
                                              CEDIPLUS PHP API DOCUMENTATION
 CediPlus API is designed to send bill or check bill, this documentation runs users through the process of sending and recieving bills using the CediPlus API.
+
 **BASE URL
 https://www.cediplus.com/apiplus/plus_v1**
+
 PHASES
 1. POST REQUEST(SEND BILL)
 2. GET REQUEST(CHECK BILL)
