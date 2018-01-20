@@ -47,29 +47,53 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
 ```
                                                 SENDBILL RESPONSE(JSON)
 ```php
-/*bill sent response*/ /*bill sent response*/ /*bill sent response*/ /*bill sent response*/ /*bill sent response*/
+/*bill sent response*/ 
+
 {
-"error": "200 200",
-"invoice_number": "xxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ",
-"response_msg":”Transaction TransactionTransaction Transaction initiated initiated initiated initiated”,
-"status_code": "0000 ",
+
+"state": "200",
+
+"invoice_number": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+
+"response_msg":”Transaction Transaction”,
+
+"status_code": "0000",
+
 }
-/*error sending bill*/ /*error sending bill*/ /*error sending bill*/ /*error sending bill*/ /*error sending bill*/
+
+/*error sending bill*/ 
+
 {
-"error": "400 400",
-" response_msg ": "invalid parametersinvalid parameters invalid parameters invalid parameters invalid parameters "
+
+"state": "400",
+
+" response_msg ": "invalid parameters"
+
 }
+
 {
-"error": "400 400",
-" response_msg ": "required parameters missing required parameters missing required parameters missing required parameters missing required parameters missing required parameters missing required parameters missing required parameters missing "
+
+"state": "400",
+
+
+" response_msg ": "required parameters missing"
+
 }
+
 {
-"error": "400 400",
-" response_msg ": "demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded demo transaction limit exceeded"
+
+"state": "400",
+
+" response_msg ": "demo transaction limit"
+
 }
+
 {
-"error": "400 400",
-" response_msg ": "invalid demo testing numberinvalid demo testing number invalid demo testing number invalid demo testing number invalid demo testing numberinvalid demo testing number invalid demo testing numberinvalid demo testing number invalid demo testing numberinvalid demo testing number "
+
+"state": "400",
+
+" response_msg ": "invalid demo testing number"
+
 }
 ```
 
