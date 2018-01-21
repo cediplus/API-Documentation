@@ -106,12 +106,12 @@ $sPD = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 
 | State | Response | Status | JSON |
 | --- | --- | --- | --- |
-| 400 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
-| 400 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
-| 400 | yet to be paid | 2000 | **{"state": "200","status_code": "2000","response_msg ": "yet to be paid"}** |
+| 200 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
+| 200 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
+| 200 | yet to be paid | 2000 | **{"state": "200","status_code": "2000","response_msg ": "yet to be paid"}** |
 | 400 | invalid parameters |      | **{"state": "200","response_msg ": "invalid parameters"}** |
 | 400 | required parameters missing |      |**{"state": "200"," response_msg ": "required parameters missing"}** |
-| 400 | unkown error | 0000 |**{"state": "200","status_code": "0000","response_msg ": "unkown error"}** |
+| 200 | unkown error | 0000 |**{"state": "200","status_code": "0000","response_msg ": "unkown error"}** |
 
 
 
