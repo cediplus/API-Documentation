@@ -55,7 +55,7 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
 **UNSUCCESFUL BILLSENT RESPONSE**                                               
 
 | State | Response | JSON |
-| --- | --- | --- | --- | 
+| --- | --- | --- |
 | 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid parameters"}** |
 | 400 | required parameters missing | **{"state": "400"," response_msg ": "required parameters missing"}** |
 | 400 | demo transaction limit | **{"state": "400"," response_msg ": "demo transaction limit"}** |
@@ -105,7 +105,7 @@ $sPD = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 **UNSUCCESFUL CHECKBILL RESPONSE**                                               
 
 | State | Response | Status | JSON |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | 400 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
 | 400 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
 | 400 | yet to be paid | 2000 | **{"state": "200","status_code": "2000","response_msg ": "yet to be paid"}** |
