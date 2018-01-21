@@ -80,7 +80,7 @@ $invoice = 'xxxxxxxxxxx';
 $api_key = 'xxxxxxxxxxxxxxx';
 
 $sURL = "https://www.cediplus.com/apiplus/plus_v1";
-$sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
+$sPD = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
    $aHTTP = array(
      'http' => array(
        'method'  => 'POST',
@@ -106,12 +106,12 @@ $sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 
 | State | Response | Status | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| 400 | wallet number is not registere | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
-| 400 | transaction failed | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
-| 400 | yet to be paid | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
-| 400 | invalid parameters |      | **{"state": "200"," response_msg ": "invalid parameters"}** | error sending bill |
+| 400 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** | error sending bill |
+| 400 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** | error sending bill |
+| 400 | yet to be paid | 2000 | **{"state": "200","status_code": "2000","response_msg ": "yet to be paid"}** | error sending bill |
+| 400 | invalid parameters |      | **{"state": "200","response_msg ": "invalid parameters"}** | error sending bill |
 | 400 | required parameters missing |      |**{"state": "200"," response_msg ": "required parameters missing"}** | error sending bill |
-| 400 | unkown error | 0000 |**{"state": "200"," response_msg ": "unkown error"}** | error sending bill |
+| 400 | unkown error | 0000 |**{"state": "200","status_code": "0000","response_msg ": "unkown error"}** | error sending bill |
 
 
 
