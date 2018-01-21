@@ -103,9 +103,10 @@ $sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | Succesful Payment |
 
 **UNSUCCESFUL CHECKBILL RESPONSE**                                               
-\
+
 | State | Response | Status  JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- |
+
 | 400 | invalid parameters | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
 | 400 | invalid parameters | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
 | 400 | invalid parameters | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
