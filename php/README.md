@@ -46,58 +46,23 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
 ?>
 ```
                                                 SENDBILL RESPONSE(JSON)
-```php
-/*bill sent response*/ 
+**SUCCESFUL BILLSENT RESPONSE**                                               
 
-{
+| State | Invoice Number | Response | Status | JSON | DESCRIPTION |
+| --- | --- | --- | --- | --- | --- | 
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | 0000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | bill sent response |
 
-"state": "200",
+**UNSUCCESFUL BILLSENT RESPONSE**                                               
 
-"invoice_number": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-
-"response_msg":”Transaction Transaction”,
-
-"status_code": "0000",
-
-}
-
-/*error sending bill*/ 
-
-{
-
-"state": "400",
-
-" response_msg ": "invalid parameters"
-
-}
-
-{
-
-"state": "400",
+| State | Response | JSON | DESCRIPTION |
+| --- | --- | --- | --- | 
+| 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid parameters"}** | error sending bill |
+| 400 | invalid parameters | **{"state": "400"," response_msg ": "required parameters missing"}** | error sending bill |
+| 400 | invalid parameters | **{"state": "400"," response_msg ": "demo transaction limit"}** | error sending bill |
+| 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid demo testing number"}** | error sending bill |
 
 
-" response_msg ": "required parameters missing"
-
-}
-
-{
-
-"state": "400",
-
-" response_msg ": "demo transaction limit"
-
-}
-
-{
-
-"state": "400",
-
-" response_msg ": "invalid demo testing number"
-
-}
-```
-
-                                                CHECK BILL(POST REQUEST)
+                                                CHECKBILL(POST REQUEST)
 IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
@@ -129,6 +94,25 @@ $sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 
 ?>
 ```
+
+                                               CHECKBILL RESPONSE(JSON)
+**SUCCESFUL CHECKBILL RESPONSE**                                               
+
+| State | Invoice Number | Response | Status | JSON | DESCRIPTION |
+| --- | --- | --- | --- | --- | --- | 
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | Succesful Payment |
+
+**UNSUCCESFUL CHECKBILL RESPONSE**                                               
+\
+| State | Response | Status  JSON | DESCRIPTION |
+| --- | --- | --- | --- | --- |
+| 400 | invalid parameters | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
+| 400 | invalid parameters | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
+| 400 | invalid parameters | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
+| 400 | invalid parameters |      | **{"state": "200"," response_msg ": "invalid parameters"}** | error sending bill |
+| 400 | invalid parameters |      |**{"state": "200"," response_msg ": "required parameters missing"}** | error sending bill |
+| 400 | invalid parameters | 0000 |**{"state": "200"," response_msg ": "unkown error"}** | error sending bill |
+
 
 
                     
