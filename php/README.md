@@ -4,8 +4,8 @@ CediPlus API is designed to send bill or check bill, this documentation runs use
 **BASE URL: https://www.cediplus.com/apiplus/plus_v1**
 
 PHASES
-1. POST REQUEST(SEND BILL)
-2. POST REQUEST(CHECK BILL)
+1. SEND BILL ---- **POST REQUEST**
+2. CHECK BILL ---- **POST REQUEST**
 
                                                 SEND BILL(POST REQUEST)
 IMPLEMENTATION
@@ -57,9 +57,9 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
 | State | Response | JSON | DESCRIPTION |
 | --- | --- | --- | --- | 
 | 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid parameters"}** | error sending bill |
-| 400 | invalid parameters | **{"state": "400"," response_msg ": "required parameters missing"}** | error sending bill |
-| 400 | invalid parameters | **{"state": "400"," response_msg ": "demo transaction limit"}** | error sending bill |
-| 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid demo testing number"}** | error sending bill |
+| 400 | required parameters missing | **{"state": "400"," response_msg ": "required parameters missing"}** | error sending bill |
+| 400 | demo transaction limit | **{"state": "400"," response_msg ": "demo transaction limit"}** | error sending bill |
+| 400 | invalid demo testing number | **{"state": "400"," response_msg ": "invalid demo testing number"}** | error sending bill |
 
 
                                                 CHECKBILL(POST REQUEST)
@@ -106,12 +106,12 @@ $sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 
 | State | Response | Status | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| 400 | invalid parameters | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
-| 400 | invalid parameters | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
-| 400 | invalid parameters | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
+| 400 | wallet number is not registere | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
+| 400 | transaction failed | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
+| 400 | yet to be paid | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
 | 400 | invalid parameters |      | **{"state": "200"," response_msg ": "invalid parameters"}** | error sending bill |
-| 400 | invalid parameters |      |**{"state": "200"," response_msg ": "required parameters missing"}** | error sending bill |
-| 400 | invalid parameters | 0000 |**{"state": "200"," response_msg ": "unkown error"}** | error sending bill |
+| 400 | required parameters missing |      |**{"state": "200"," response_msg ": "required parameters missing"}** | error sending bill |
+| 400 | unkown error | 0000 |**{"state": "200"," response_msg ": "unkown error"}** | error sending bill |
 
 
 
