@@ -104,9 +104,8 @@ $sPD = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
 
 **UNSUCCESFUL CHECKBILL RESPONSE**                                               
 
-| State | Response | Status  JSON | DESCRIPTION |
+| State | Response | Status | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-
 | 400 | invalid parameters | 5000 | **{"state": "200"," response_msg ": "wallet number is not registere"}** | error sending bill |
 | 400 | invalid parameters | 4000 | **{"state": "200"," response_msg ": "transaction failed"}** | error sending bill |
 | 400 | invalid parameters | 2000 | **{"state": "200"," response_msg ": "yet to be paid"}** | error sending bill |
