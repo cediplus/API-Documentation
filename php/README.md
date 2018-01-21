@@ -48,13 +48,13 @@ $sPD = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description
                                                 SENDBILL RESPONSE(JSON)
 **SUCCESFUL BILLSENT RESPONSE**                                               
 
-| State | Invoice Number | Response | Status | JSON | DESCRIPTION |
+| state | invoice_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | 0000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | bill sent response |
 
 **UNSUCCESFUL BILLSENT RESPONSE**                                               
 
-| State | Response | JSON |
+| state | response_msg | JSON |
 | --- | --- | --- |
 | 400 | invalid parameters | **{"state": "400"," response_msg ": "invalid parameters"}** |
 | 400 | required parameters missing | **{"state": "400"," response_msg ": "required parameters missing"}** |
@@ -98,13 +98,13 @@ $sPD = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill';
                                                CHECKBILL RESPONSE(JSON)
 **SUCCESFUL CHECKBILL RESPONSE**                                               
 
-| State | Invoice Number | Response | Status | JSON | DESCRIPTION |
+| state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | Succesful Payment |
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
 
 **UNSUCCESFUL CHECKBILL RESPONSE**                                               
 
-| State | Response | Status | JSON |
+| state | response_msg | status_code | JSON |
 | --- | --- | --- | --- |
 | 200 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
 | 200 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
