@@ -5,7 +5,7 @@ CediPlus API is designed to send bill or check bill, this documentation runs use
 
 PHASES
 1. POST REQUEST(SEND BILL)
-2. GET REQUEST(CHECK BILL)
+2. POST REQUEST(CHECK BILL)
 
                                                 SEND BILL(POST REQUEST)
 IMPLEMENTATION
