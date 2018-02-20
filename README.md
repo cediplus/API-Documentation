@@ -18,6 +18,6 @@
 
 ## License
 
-This software is released under the [Apache License 2.0](LICENSE) License.
+This software is released under the [MIT](LICENSE) License.
 
-© 2017-2018 Cartalyst LLC, All rights reserved.
+© 2018 CediPlus, All rights reserved.
