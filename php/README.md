@@ -8,7 +8,11 @@ PHASES
 2. CHECK BILL ---- **POST REQUEST**
 
                                                 SEND BILL(POST REQUEST)
+                                               
+This sends a prompt to the users mobile device to authorize payments.
+
 IMPLEMENTATION
+
 
 | Parameters | Status | Values | Description |
 | --- | --- | --- | --- |
@@ -65,6 +69,10 @@ $base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amou
 
 
                                                 CHECKBILL(POST REQUEST)
+                                               
+ The generated invoice number from the send bill is used to check the status of the bill to see if it was successful, failed or yet to be paid
+ 
+                                                
 IMPLEMENTATION
 
 | Parameters | Status | Values | Description |
