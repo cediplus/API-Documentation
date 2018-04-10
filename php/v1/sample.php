@@ -99,8 +99,6 @@ $base_url_parameters = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkb
    return $result;
 }
 
-//uncomment to run checkbill code sampple.
-//checkbill();
 
 ?>
 
