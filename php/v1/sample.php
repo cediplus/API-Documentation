@@ -106,7 +106,7 @@ $base_url_parameters = '&invoice='.$invoice.'&api_key='.$api_key.'&action=checkb
 	<form method="POST" action="">
 		<input type="text" name="wallet" placeholder="Phone Number"/>
 		<input type="number" name="amount" placeholder="Amount" />
-		<button type="submit" name="submit"></button>
+		<button type="submit" name="submit">Send</button>
 	</form>
 	<p>Response: <span><?php echo $response;?></span></p></br>
 	<span><?php echo $form;?></span>
