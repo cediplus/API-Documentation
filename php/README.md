@@ -38,16 +38,15 @@ $api_key = 'xxxxxxxxxxxxxxx';
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
 $base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
-   $aHTTP = array(
+   $header = array(
      'http' => array(
        'method'  => 'POST',
        'header'  => 'Content-type: application/x-www-form-urlencoded',
-       'content' => $sPD
+       'content' => $base_url_parameters
      )
    );
-   $context = stream_context_create($aHTTP);
-   $resultx = file_get_contents($sURL, false, $context);
-   $result = json_decode($resultx, TRUE);
+   $context = stream_context_create($header);
+   $result = file_get_contents($base_url, false, $context);
 
 ?>
 ```
@@ -91,16 +90,15 @@ $api_key = 'xxxxxxxxxxxxxxx';
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
 $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
-   $aHTTP = array(
+   $header = array(
      'http' => array(
        'method'  => 'POST',
        'header'  => 'Content-type: application/x-www-form-urlencoded',
-       'content' => $sPD
+       'content' => $base_url_parameters
      )
    );
    $context = stream_context_create($aHTTP);
-   $resultx = file_get_contents($sURL, false, $context);
-   $result = json_decode($resultx, TRUE);
+   $result = file_get_contents($base_url, false, $context);
 
 ?>
 ```
