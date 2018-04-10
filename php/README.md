@@ -53,9 +53,9 @@ $base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amou
                                                 SENDBILL RESPONSE(JSON)
 **SUCCESFUL BILLSENT RESPONSE**                                               
 
-| state | invoice_number | response_msg | status_code | JSON | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | 0000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”,"status_code": "0000",}** | bill sent response |
+| state | invoice_number | response_msg | JSON | DESCRIPTION |
+| --- | --- | --- | --- | --- | 
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”}** | bill sent response |
 
 **UNSUCCESFUL BILLSENT RESPONSE**                                               
 
