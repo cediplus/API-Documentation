@@ -28,18 +28,23 @@ if (isset($_POST['submit'])) {
 	if ($error == 0) {
 		$response = sendbill($wallet_type, $wallet, $amount, $description, $api_key);
 		$json = json_decode($response,TRUE); 	
-		$invoice = $json['invoice_number'];
 		
-		$form = '<form method="POST" action="">
-					<input type="hidden" name="invoice" value="'.$invoice.'"/>
-					<input type="submit" name="check"/>
-				</form>';
+    
+    if($json['state'] == 200){
+      $invoice = $json['invoice_number'];
+      $form = '<form method="POST" action="">
+                <input type="hidden" name="invoice" value="'.$invoice.'"/>
+                <input type="submit" name="check"/>
+              </form>';
+    }
+		
   }
   else{
     $response = 'Invalid Parameters';
   }
 }
 if (isset($_POST['check'])) {
+  $error = 0;
 	$invoice = $_POST['invoice'];
 	$api_key = 'xxxxxxxxxxxxxxx';
 	if (empty($invoice) || empty($api_key)) {
@@ -51,17 +56,16 @@ if (isset($_POST['check'])) {
 }
 function sendbill($wallet_type,$wallet,$amount,$description,$api_key){
   $base_url = "https://www.cediplus.com/apiplus/plus_v1";
-  $base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
+  $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
    $header = array(
      'http' => array(
        'method'  => 'POST',
        'header'  => 'Content-type: application/x-www-form-urlencoded',
-       'content' => $sPD
+       'content' => $base_url_parameters
      )
    );
    $context = stream_context_create($header);
-   $resultx = file_get_contents($base_url, false, $context);
-   $result = json_decode($resultx, TRUE);
+   $result = file_get_contents($base_url, false, $context);
    return $result;
 }
 //CHECK BILL(POST REQUEST) SAMPLE CODE
@@ -78,8 +82,7 @@ function checkbill($invoice,$api){
      )
    );
    $context = stream_context_create($aHTTP);
-   $resultx = file_get_contents($sURL, false, $context);
-   $result = json_decode($resultx, TRUE);
+   $result = file_get_contents($sURL, false, $context);
    return $result;
 }
 ?>
