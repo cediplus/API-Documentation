@@ -30,8 +30,8 @@ if (isset($_POST['submit'])) {
 
 if ($error == 0) {
 	$response = sendbill($wallet_type, $wallet, $amount, $description, $api_key);
-	$jason = json_decode($response,TRUE); 	
-	$invoice = $jason['invoice'];
+	$json = json_decode($response,TRUE); 	
+	$invoice = $json['invoice_number'];
 	
 
 	$form = '<form method="POST" action="">
