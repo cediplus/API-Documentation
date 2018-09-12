@@ -26,18 +26,18 @@ IMPLEMENTATION
 Sample PHP code
 ```php
 <?php
-
 /** Parameter values declared as a variable and assigned example values
-** M for MTN and T for Tigo
+** m for MTN and t for AirtelTigo
 **/
+
 $wallet_type = 'm';
 $wallet = '0248499091';
 $amount = '1.00';
 $description = 'personal';
-$api_key = 'xxxxxxxxxxxxxxx'; 
+$api_key = 'e8c48d4bbac8fdc0484e58e579eb74c3'; 
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
-$base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
+$base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
    $header = array(
      'http' => array(
        'method'  => 'POST',
@@ -47,6 +47,7 @@ $base_url_parameters = 'wallet_type='.$wtype.'&wallet='.$wallet.'&amount='.$amou
    );
    $context = stream_context_create($header);
    $result = file_get_contents($base_url, false, $context);
+   echo $result;
 
 ?>
 ```
@@ -85,8 +86,8 @@ Sample PHP code
 <?php
 
 /**Parameter values declared as a variable and assigned example values**/
-$invoice = 'xxxxxxxxxxx';
-$api_key = 'xxxxxxxxxxxxxxx';
+$invoice = 'xxxxxxxxxxxx';
+$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
 $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
@@ -97,9 +98,11 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
        'content' => $base_url_parameters
      )
    );
-   $context = stream_context_create($aHTTP);
+
+   $context = stream_context_create($header);
    $result = file_get_contents($base_url, false, $context);
 
+   echo $result;
 ?>
 ```
 
