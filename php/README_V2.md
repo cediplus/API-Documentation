@@ -22,7 +22,7 @@ IMPLEMENTATION
 | amount | `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | description | `required` | testing | This is to give a description of the transaction. | 
-| call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a get request, when the transaction is successful or has failed. | 
+| call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a get request when the transaction is successful or has failed. | 
 
 Sample PHP code
 ```php
@@ -61,14 +61,21 @@ $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”}** | bill sent response |
 
 
-**CALL BACK URL RESPONSE**   
+**CALL BACK URL SUCCESFUL RESPONSE**   
 
-The response will be sent to the call back url as a **GET REQUEST** (http://www.yourwebisteurl.com/call_back_file?response=**CALL BACK RESPONSE**)
+The response will be sent to the call back url as a **GET REQUEST** (http://www.yourwebisteurl.com/call_back_file?response= **CALL BACK RESPONSE**)
 
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
+
+
+**UNSUCCESFUL CHECKBILL RESPONSE**                                               
+
+| state | response_msg | status_code | JSON |
+| --- | --- | --- | --- |
+
 | 200 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
 | 200 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
 
