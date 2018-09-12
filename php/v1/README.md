@@ -31,10 +31,10 @@ Sample PHP code
 **/
 
 $wallet_type = 'm';
-$wallet = '0248499091';
+$wallet = '0240000000';
 $amount = '1.00';
 $description = 'personal';
-$api_key = 'e8c48d4bbac8fdc0484e58e579eb74c3'; 
+$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; 
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
 $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action=sendbill'; 
