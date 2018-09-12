@@ -4,8 +4,7 @@
 
 ## Language support
 
-#### PHP
-[Plus-php](https://github.com/cediplus/API-Documentation/tree/master/php)
+#### [PHP](https://github.com/cediplus/API-Documentation/tree/master/php)
 
 ## License
 
