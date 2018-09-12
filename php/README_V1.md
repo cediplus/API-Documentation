@@ -17,7 +17,7 @@ IMPLEMENTATION
 | Parameters | Status | Values | Description |
 | --- | --- | --- | --- |
 | action | `required` | sendbill | This is to indicate transaction type whether to send bill or check bill |                               
-| wallet_type | `required` | m,t | This is to indicate the wallet type to use for the transaction Where ‘m’ is for mtn and ‘t’ is for tigo wallets respectively |  
+| wallet_type | `required` | m,t | This is to indicate the wallet type to use for the transaction Where ‘m’ is for MTN and ‘t’ is for AirtelTigo wallets respectively |  
 | wallet | `required` | 000 000 0000 | This is the phone number for the transaction |
 | amount | `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
@@ -52,13 +52,13 @@ $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='
 ?>
 ```
                                                 SENDBILL RESPONSE(JSON)
-**SUCCESFUL BILLSENT RESPONSE**                                               
+**SUCCESSFUL BILLSENT RESPONSE**                                               
 
 | state | invoice_number | response_msg | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”}** | bill sent response |
 
-**UNSUCCESFUL BILLSENT RESPONSE**                                               
+**UNSUCCESSFUL BILLSENT RESPONSE**                                               
 
 | state | response_msg | JSON |
 | --- | --- | --- |
@@ -107,13 +107,13 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
 ```
 
                                                CHECKBILL RESPONSE(JSON)
-**SUCCESFUL CHECKBILL RESPONSE**                                               
+**SUCCESSFUL CHECKBILL RESPONSE**                                               
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
 
-**UNSUCCESFUL CHECKBILL RESPONSE**                                               
+**UNSUCCESSFUL CHECKBILL RESPONSE**                                               
 
 | state | response_msg | status_code | JSON |
 | --- | --- | --- | --- |
