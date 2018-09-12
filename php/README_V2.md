@@ -54,14 +54,14 @@ $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='
 ?>
 ```
                                                 SENDBILL RESPONSE(JSON)
-**SUCCESFUL BILLSENT RESPONSE**                                               
+**SUCCESSFUL BILLSENT RESPONSE**                                               
 
 | state | invoice_number | response_msg | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Transation Initiated | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”Transaction Initiated”}** | bill sent response |
 
 
-**SUCCESFUL CALL BACK URL RESPONSE**   
+**SUCCESSFUL CALL BACK URL RESPONSE**   
 
 The response will be sent to the call back url as a **GET REQUEST** (http://www.yourwebisteurl.com/call_back_file?response= **CALL BACK RESPONSE**)
 
@@ -73,7 +73,7 @@ The response will be sent to the call back url as a **GET REQUEST** (http://www.
 
 
 
-**UNSUCCESFUL CALL BACK URL RESPONSE**                                               
+**UNSUCCESSFUL CALL BACK URL RESPONSE**                                               
 
 | state | response_msg | status_code | JSON |
 | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ The response will be sent to the call back url as a **GET REQUEST** (http://www.
 
 
 
-**UNSUCCESFUL BILLSENT RESPONSE**                                               
+**UNSUCCESSFUL BILLSENT RESPONSE**                                               
 
 | state | response_msg | JSON |
 | --- | --- | --- |
@@ -132,13 +132,13 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
 ```
 
                                                CHECKBILL RESPONSE(JSON)
-**SUCCESFUL CHECKBILL RESPONSE**                                               
+**SUCCESSFUL CHECKBILL RESPONSE**                                               
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
 | 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
 
-**UNSUCCESFUL CHECKBILL RESPONSE**                                               
+**UNSUCCESSFUL CHECKBILL RESPONSE**                                               
 
 | state | response_msg | status_code | JSON |
 | --- | --- | --- | --- |
