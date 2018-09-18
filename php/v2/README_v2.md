@@ -35,7 +35,7 @@ Sample PHP code
 $wallet_type = 'm';
 $wallet = '0240000000';
 $amount = '1.00';
-$description = 'personal';
+$description = 'description of the transaction';
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 $call_back_url = 'http://www.yourwebisteurl.com/call_back_file';
 
