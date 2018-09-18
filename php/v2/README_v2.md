@@ -69,7 +69,7 @@ The response will be sent to the call back url as a **GET REQUEST** (http://www.
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000"}** | Succesful Payment |
 
 
 
@@ -137,7 +137,7 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000"}** | Succesful Payment |
 
 **UNSUCCESSFUL CHECKBILL RESPONSE**                                               
 
