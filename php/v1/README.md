@@ -117,7 +117,7 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
 
 | state | response_msg | status_code | JSON |
 | --- | --- | --- | --- |
-| 200 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registere"}** |
+| 200 | wallet number is not registered | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registered"}** |
 | 200 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
 | 200 | yet to be paid | 2000 | **{"state": "200","status_code": "2000","response_msg ": "yet to be paid"}** |
 | 400 | invalid parameters |      | **{"state": "400","response_msg ": "invalid parameters"}** |
