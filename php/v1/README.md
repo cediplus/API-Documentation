@@ -33,7 +33,7 @@ Sample PHP code
 $wallet_type = 'm';
 $wallet = '0240000000';
 $amount = '1.00';
-$description = 'personal';
+$description = 'description of the transaction';
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; 
 
 $base_url = "https://www.cediplus.com/apiplus/plus_v1";
@@ -111,7 +111,7 @@ $base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbi
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000",}** | Succesful Payment |
+| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000"}** | Succesful Payment |
 
 **UNSUCCESSFUL CHECKBILL RESPONSE**                                               
 
