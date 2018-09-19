@@ -23,7 +23,7 @@ IMPLEMENTATION
 | amount | `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | description | `required` | testing | This is to give a description of the transaction. | 
-| call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a get request when the transaction is successful or has failed. | 
+| call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
 
 Sample PHP code
 ```php
@@ -64,7 +64,7 @@ $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='
 
 **SUCCESSFUL CALL BACK URL RESPONSE**   
 
-The response will be sent to the call back url as a **GET REQUEST** (http://www.yourwebisteurl.com/call_back_file?response= **CALL BACK RESPONSE**)
+The response will be sent to the call back url as a **POST REQUEST** (http://www.yourwebisteurl.com/call_back_file?response= **CALL BACK RESPONSE**)
 
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
