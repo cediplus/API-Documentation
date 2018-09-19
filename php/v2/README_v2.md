@@ -64,7 +64,18 @@ $base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='
 
 **SUCCESSFUL CALL BACK URL RESPONSE**   
 
-The response will be sent to the call back url as a **POST REQUEST** (http://www.yourwebisteurl.com/call_back_file?response= **CALL BACK RESPONSE**)
+The response will be sent to the call back url as a **POST REQUEST** 
+
+Sample PHP code for your call back url
+```php
+<?php
+
+if(isset($_POST['response']) && $_POST['response']){
+    $response = $_POST['response'];
+}
+
+?>
+```
 
 
 | state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
