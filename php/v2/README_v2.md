@@ -89,19 +89,19 @@ if(isset($_POST['response']) && $_POST['response']){
 ```
 
 
-| state | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- | 
-| 200 | xxxxxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000"}** | Succesful Payment |
+| state | invoice_number | transaction_number | response_msg | status_code | JSON | DESCRIPTION |
+| --- | --- | --- | --- | --- | --- | --- | 
+| 200 | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxxxxxx | Payment Succesful | 1000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","transaction_number": "xxxxxxxxxxxxxxxxxxx","response_msg":”payment successful”,"status_code": "1000"}** | Succesful Payment |
 
 
 
 
 **UNSUCCESSFUL CALL BACK URL RESPONSE**                                               
 
-| state | response_msg | status_code | JSON |
-| --- | --- | --- | --- |
-| 200 | wallet number is not registere | 5000 | **{"state": "200", "status_code": "5000","response_msg ": "wallet number is not registered"}** |
-| 200 | transaction failed | 4000 | **{"state": "200","status_code": "4000","response_msg ": "transaction failed"}** |
+| state | invoice_number | response_msg | status_code | JSON |
+| --- | --- | --- | --- | --- |
+| 200 | xxxxxxxxxxxxxxx | wallet number is not registere | 5000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx", "status_code": "5000","response_msg ": "wallet number is not registered"}** |
+| 200 | xxxxxxxxxxxxxxx | transaction failed | 4000 | **{"state": "200","invoice_number": "xxxxxxxxxxxxxxxxxxx","status_code": "4000","response_msg ": "transaction failed"}** |
 
 
 
