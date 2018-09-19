@@ -76,11 +76,11 @@ if(isset($_POST['response']) && $_POST['response']){
     $state = $data['response']['state'];
     if($state == 200){
     /**
-      ...
+      get the rest of the successful state data...
     */
     }else{
     /**
-      ...
+      get the rest of the failed state data...
     */
     }
 }
