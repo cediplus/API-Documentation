@@ -20,7 +20,7 @@ IMPLEMENTATION
 | action | `required` | sendbill | This is to indicate transaction type whether to send bill or check bill |                               
 | wallet_type | `required` | m,t | This is to indicate the wallet type to use for the transaction Where ‘m’ is for MTN and ‘t’ is for AirtelTigo wallets respectively |  
 | wallet | `required` | 000 000 0000 | This is the phone number for the transaction |
-| amount | `required` | 1.00 | Amount of money (max of 999,999.00 cedis). |
+| amount | `required` | 1.00 | Amount of money (maximum of 2,000.00 cedis and minimum of 1.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | description | `required` | testing | This is to give a description of the transaction. | 
 | call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
