@@ -23,7 +23,7 @@ IMPLEMENTATION
 | amount | `required` | 1.00 | Amount of money (maximum of 2,000.00 cedis and minimum of 1.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | description | `required` | testing | This is to give a description of the transaction. | 
-| call_back_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
+| callback_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
 
 Sample PHP code
 ```php
@@ -37,10 +37,10 @@ $wallet = '0240000000';
 $amount = '1.00';
 $description = 'description of the transaction';
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-$call_back_url = 'http://www.yourwebisteurl.com/call_back_file';
+$callback_url = 'http://www.yourwebisteurl.com/callback_file';
 
 $base_url = "https://www.cediplus.com/api/v2";
-$base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action='.$call_back_url.'&action=sendbill'; 
+$base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action='.$callback_url.'&action=sendbill'; 
    $header = array(
      'http' => array(
        'method'  => 'POST',
