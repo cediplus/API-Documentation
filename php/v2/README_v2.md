@@ -23,7 +23,7 @@ IMPLEMENTATION
 | amount | `required` | 1.00 | Amount of money (maximum of 2,000.00 cedis and minimum of 1.00 cedis). |
 | api_key | `required` | xxxxxxxxxxxxxxxxxxxxxx | This is your Business or Demo API key |
 | description | `required` | testing | This is to give a description of the transaction. | 
-| callback_url | `optional` | http://www.yourwebisteurl.com/call_back_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
+| callback_url | `optional` | http://www.yourwebisteurl.com/callback_file | This is to receive a response via a post request when the transaction is successful or has failed. | 
 
 Sample PHP code
 ```php
