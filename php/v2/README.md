@@ -73,7 +73,7 @@ Sample PHP code for your call back url
 if(isset($_POST['response']) && $_POST['response']){
     $response = $_POST['response'];
     $data = json_decode($response, True);
-    $state = $data['response']['state'];
+    $state = $data['state'];
     if($state == 200){
     /**
     ** get the rest of the successful state data...
