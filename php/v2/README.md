@@ -32,25 +32,36 @@ Sample PHP code
 ** m for MTN and t for AirtelTigo
 **/
 
-$wallet_type = 'm';
-$wallet = '0240000000';
-$amount = '1.00';
-$description = 'description of the transaction';
-$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-$callback_url = 'http://www.yourwebisteurl.com/callback_file';
 
-$base_url = "https://www.cediplus.com/api/v2";
-$base_url_parameters = 'wallet_type='.$wallet_type.'&wallet='.$wallet.'&amount='.$amount.'&description='.$description.'&api_key='.$api_key.'&action='.$callback_url.'&action=sendbill'; 
-   $header = array(
-     'http' => array(
-       'method'  => 'POST',
-       'header'  => 'Content-type: application/x-www-form-urlencoded',
-       'content' => $base_url_parameters
-     )
-   );
-   $context = stream_context_create($header);
-   $result = file_get_contents($base_url, false, $context);
-   echo $result;
+$cediplus_api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+$callback_url = 'http://www.yourwebisteurl.com/callback_file';
+$wallet_number = '0240000000';
+$amount = '2';
+$description = 'description of the transaction';
+            
+
+$data = array(
+  "action" => "sendbill", 
+  "api_key" => $cediplus_api_key, 
+  "wallet_type" => "m", 
+  "wallet" => $wallet_number, 
+  "amount" => $amount, 
+  "description" => $description, 
+  "callback_url" => $callback_url
+); // POST data included in your query
+
+$ch = curl_init("https://www.cediplus.com/api/v2"); // Set url to query 
+
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); // Send via POST                                         
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data)); // Set POST data                                  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response text   
+curl_setopt($ch, CURLOPT_HEADER, "Content-Type: application/x-www-form-urlencoded"); // send POST data as form data
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$result = json_decode($response, True);
+echo $result;
 
 ?>
 ```
@@ -134,23 +145,27 @@ Sample PHP code
 <?php
 
 /**Parameter values declared as a variable and assigned example values**/
-$invoice = 'xxxxxxxxxxxx';
-$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+$cediplus_api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+$invoice_number = '0000000000000000';           
 
-$base_url = "https://www.cediplus.com/api/v2";
-$base_url_parameters = 'invoice='.$invoice.'&api_key='.$api_key.'&action=checkbill'; 
-   $header = array(
-     'http' => array(
-       'method'  => 'POST',
-       'header'  => 'Content-type: application/x-www-form-urlencoded',
-       'content' => $base_url_parameters
-     )
-   );
+$data = array(
+  "action" => "checkbill", 
+  "api_key" => $cediplus_api_key, 
+  "invoice" => $invoice_number
+); // POST data included in your query
 
-   $context = stream_context_create($header);
-   $result = file_get_contents($base_url, false, $context);
+$ch = curl_init("https://www.cediplus.com/api/v2"); // Set url to query 
 
-   echo $result;
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); // Send via POST                                         
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data)); // Set POST data                                  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return response text   
+curl_setopt($ch, CURLOPT_HEADER, "Content-Type: application/x-www-form-urlencoded"); // send POST data as form data
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$result = json_decode($response, True);
+echo $result;
 ?>
 ```
 
